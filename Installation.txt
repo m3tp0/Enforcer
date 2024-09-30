@@ -1,0 +1,59 @@
+Installation
+
+1. Clone the Repository (if applicable):
+
+git clone https://github.com/yourusername/api-security-assessment-tool.git
+cd api-security-assessment-tool
+
+2. Install Required Python Modules:
+It's recommended to use a virtual environment:
+
+python3 -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+
+Install the dependencies:
+pip install -r requirements.txt
+
+If you don't have a requirements.txt file, install the modules manually:
+pip install requests validators reportlab colorama scapy PyJWT shutil beautifulsoup4 cryptography python-dotenv flask flask_jwt_extended marshmallow sqlalchemy werkzeug
+
+3. Ensure Elevated Privileges:
+
+o Linux/macOS: The script may require sudo to capture network traffic.
+o Windows: Run the script as an administrator.
+
+Usage:
+Running the Script
+
+1. Make the Script Executable (if on Linux/macOS):
+chmod +x api_security_assessment.py
+
+2. Run the Script:
+python api_security_assessment.py
+
+Or, if made executable:
+
+./api_security_assessment.py
+
+3. Follow the Interactive Prompts:
+
+o Enter the API URL: Provide the full URL of the API you want to scan, including the protocol (e.g., https://api.example.com).
+o Point of Contact Email: Enter the email address of the security assessor or point of contact.
+o Application Name: Provide the name of the application being tested.
+o Specify Endpoints: Indicate if you have specific endpoints to scan and provide their URLs.
+o Authentication Details: If the API requires authentication, select the appropriate method and provide the necessary credentials.
+
+Authentication
+The script supports the following authentication methods:
+• API Key: Adds an Authorization: ApiKey <api_key> header to requests.
+• Bearer Token: Adds an Authorization: Bearer <token> header to requests.
+• Basic Authentication: Uses HTTP Basic Auth with a username and password.
+
+Output Files
+Upon completion, the script generates and retains the following files:
+1. Final Report (PDF): A comprehensive report of the security assessment findings.
+2. Captured Traffic (PCAP): A packet capture file containing the network traffic during the assessment.
+3. Captured Requests (Postman Collection): A Postman collection JSON file with all captured API requests.
+4. GET and POST Request Logs: Separate text files containing logged GET and POST requests for each URL.
+5. SQLMap Report: Output from the SQL injection testing using SQLMap.
+Note: Temporary files and logs are cleaned up automatically after the script completes.
