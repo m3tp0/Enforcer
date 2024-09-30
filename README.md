@@ -27,3 +27,23 @@ Notes and Warnings
 •	Dependencies: Ensure all required Python modules are installed and up to date.
 •	No Warranty: This tool is provided "as is" without warranty of any kind. Use at your own risk.
 
+Security Checks Performed
+The script performs the following security checks:
+1.	Broken Object Level Authorization
+2.	Broken Authentication
+3.	Broken Object Property Level Authorization
+4.	Unrestricted Resource Consumption
+5.	Broken Function Level Authorization
+6.	Mass Assignment
+7.	Security Misconfiguration
+8.	Injection Attacks
+9.	Improper Assets Management
+10.	Unauthorized Password Change
+11.	JWT Authentication Bypass
+12.	Server Side Request Forgery (SSRF)
+13.	Regular Expression Denial of Service (ReDoS)
+14.	User Enumeration
+15.	Unrestricted Access to Sensitive Business Flows
+16.	Excessive Data Exposure
+17.	Unsafe Consumption of APIs
+Each check includes detailed remediation steps and code examples in the report.
